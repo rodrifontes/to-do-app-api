@@ -1,7 +1,7 @@
 const db = require('../../database');
 
 class TaskRepository {
-  async findAll(orderBy = 'ASC') {
+  async findAll(orderBy = 'DESC') {
     const direction = orderBy.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
     const rows = await db.query(`
       SELECT *
